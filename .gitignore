@@ -41,3 +41,6 @@ next-env.d.ts
 
 # workbuddy local data
 .workbuddy/
+
+# pnpm interrupted install leftovers (can be safely deleted)
+_tmp_*
