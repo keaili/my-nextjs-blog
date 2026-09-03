@@ -7,7 +7,7 @@ export function Footer() {
       <Container>
         <div className="py-16 flex flex-col items-center">
           <h3 className="text-3xl font-bold tracking-tighter leading-tight text-center mb-8 bg-neo-pink border-3 border-neo-black shadow-neo-sm px-4 py-2 transform -rotate-1">
-            了解熠辉
+            了解 keaili
           </h3>
           <div className="flex justify-center items-center space-x-8">
             <a

@@ -7,7 +7,7 @@ export function Intro() {
         Blog.
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8 bg-neo-blue border-2 border-neo-black p-3 shadow-neo-sm transform -rotate-1">
-        这是由Next.js官网提供的模板改造
+        千里之行，始于足下
       </h4>
     </section>
   );

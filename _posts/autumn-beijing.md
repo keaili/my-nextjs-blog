@@ -4,7 +4,7 @@ excerpt: "北京的秋天，金风送爽，层林尽染。"
 coverImage: "/assets/blog/autumn-beijing/cover.png"
 date: "2025-09-21T05:35:07.322Z"
 author:
-  name: 熠辉
+  name: keaili
   picture: "/assets/blog/authors/avatar.png"
 ogImage:
   url: "/assets/blog/autumn-beijing/cover.png"

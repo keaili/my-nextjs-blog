@@ -4,7 +4,7 @@ excerpt: "北京的夏天，骄阳似火，却也生机盎然。"
 coverImage: "/assets/blog/summer-beijing/cover.png"
 date: "2025-05-15T05:35:07.322Z"
 author:
-  name: 熠辉
+  name: keaili
   picture: "/assets/blog/authors/avatar.png"
 ogImage:
   url: "/assets/blog/summer-beijing/cover.png"

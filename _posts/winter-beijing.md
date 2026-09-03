@@ -2,9 +2,9 @@
 title: "北京的冬天"
 excerpt: "北京的冬天，银装素裹，寒冷却不失温情。"
 coverImage: "/assets/blog/winter-beijing/cover.png"
-date: "2025-12-21T05:35:07.322Z"
+date: "2026-09-04T05:35:07.322Z"
 author:
-  name: 熠辉
+  name: keaili
   picture: "/assets/blog/authors/avatar.png"
 ogImage:
   url: "/assets/blog/winter-beijing/cover.png"

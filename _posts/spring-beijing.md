@@ -4,7 +4,7 @@ excerpt: "北京的春天，万物复苏，春暖花开。"
 coverImage: "/assets/blog/spring-beijing/cover.png"
 date: "2025-03-29T05:35:07.322Z"
 author:
-  name: 熠辉
+  name: keaili
   picture: "/assets/blog/authors/avatar.png"
 ogImage:
   url: "/assets/blog/spring-beijing/cover.png"
