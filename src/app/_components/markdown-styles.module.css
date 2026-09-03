@@ -1,0 +1,49 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol {
+  @apply my-6;
+}
+
+.markdown blockquote {
+  @apply my-6 pl-4 border-l-4 border-neo-black bg-neo-pink py-2 px-4 transform -rotate-1;
+}
+
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug font-bold pb-2 border-b-3 border-neo-black inline-block px-2 bg-neo-yellow;
+}
+
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug font-bold border-b-3 border-neo-black inline-block px-2 bg-neo-blue;
+}
+
+.markdown a {
+  @apply text-neo-black font-bold underline decoration-neo-red decoration-2 underline-offset-4 hover:bg-neo-green transition-colors;
+}
+
+.markdown ul {
+  @apply list-disc pl-6;
+}
+
+.markdown ol {
+  @apply list-decimal pl-6;
+}
+
+.markdown li {
+  @apply mb-2;
+}
+
+.markdown code {
+  @apply bg-neo-pink px-1 py-0.5 rounded border border-neo-black;
+}
+
+.markdown pre {
+  @apply bg-neo-green p-4 border-2 border-neo-black shadow-neo-sm overflow-x-auto my-6;
+}
+
+.markdown pre code {
+  @apply bg-transparent border-0 p-0;
+}
