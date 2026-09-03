@@ -3,53 +3,59 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="bg-neo-green border-t-3 border-neo-black mt-8">
+    <footer className="border-t border-bento-line mt-16">
       <Container>
-        <div className="py-16 flex flex-col items-center">
-          <h3 className="text-3xl font-bold tracking-tighter leading-tight text-center mb-8 bg-neo-pink border-3 border-neo-black shadow-neo-sm px-4 py-2 transform -rotate-1">
+        <div className="py-14 flex flex-col items-center">
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tighter text-center mb-8 text-bento-cream">
             了解 keaili
           </h3>
-          <div className="flex justify-center items-center space-x-8">
+          <div className="flex justify-center items-center space-x-6">
             <a
               href="https://www.douyin.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-neo-white border-2 border-neo-black shadow-neo-sm transform hover:rotate-3 hover:scale-110 transition-transform"
+              aria-label="Douyin"
+              className="p-3 rounded-2xl bg-bento-card border border-bento-line transition-colors duration-300 hover:bg-bento-taupe"
             >
-              <Image 
-                src="/icons/douyin.svg" 
-                alt="Douyin" 
-                width={32} 
-                height={32} 
+              <Image
+                src="/icons/douyin.svg"
+                alt="Douyin"
+                width={28}
+                height={28}
               />
             </a>
             <a
               href="https://weibo.com/u/2789699882"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-neo-yellow border-2 border-neo-black shadow-neo-sm transform hover:-rotate-3 hover:scale-110 transition-transform"
+              aria-label="Weibo"
+              className="p-3 rounded-2xl bg-bento-card border border-bento-line transition-colors duration-300 hover:bg-bento-taupe"
             >
-              <Image 
-                src="/icons/weibo.svg" 
-                alt="Weibo" 
-                width={32} 
-                height={32} 
+              <Image
+                src="/icons/weibo.svg"
+                alt="Weibo"
+                width={28}
+                height={28}
               />
             </a>
             <a
               href="https://www.xiaohongshu.com/user/profile/63533d12000000001901de5a"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-neo-blue border-2 border-neo-black shadow-neo-sm transform hover:rotate-3 hover:scale-110 transition-transform"
+              aria-label="Xiaohongshu"
+              className="p-3 rounded-2xl bg-bento-card border border-bento-line transition-colors duration-300 hover:bg-bento-taupe"
             >
-              <Image 
-                src="/icons/xhs.svg" 
-                alt="Xiaohongshu" 
-                width={32} 
-                height={32} 
+              <Image
+                src="/icons/xhs.svg"
+                alt="Xiaohongshu"
+                width={28}
+                height={28}
               />
             </a>
           </div>
+          <p className="mt-8 text-xs uppercase tracking-[0.25em] text-bento-sand">
+            © 2026 keaili
+          </p>
         </div>
       </Container>
     </footer>

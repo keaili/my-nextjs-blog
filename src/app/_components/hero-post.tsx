@@ -1,6 +1,5 @@
-import Avatar from "@/app/_components/avatar";
-import CoverImage from "@/app/_components/cover-image";
 import { type Author } from "@/interfaces/author";
+import Image from "next/image";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
 
@@ -18,35 +17,34 @@ export function HeroPost({
   coverImage,
   date,
   excerpt,
-  author,
   slug,
 }: Props) {
   return (
-    <section className="mb-16 transform">
-      <div className="mb-8 md:mb-16 relative">
-        <div className="border-3 border-neo-black bg-neo-yellow shadow-neo-md relative">
-          <CoverImage title={title} src={coverImage} slug={slug} />
-        </div>
+    <Link
+      href={`/posts/${slug}`}
+      aria-label={title}
+      className="group relative block md:col-span-2 md:row-span-2 h-80 md:h-auto overflow-hidden rounded-3xl border border-bento-line"
+    >
+      <Image
+        src={coverImage}
+        alt={`Cover Image for ${title}`}
+        fill
+        priority
+        sizes="(max-width: 768px) 100vw, 50vw"
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+      <div className="absolute bottom-0 left-0 p-6 md:p-8">
+        <p className="text-[11px] uppercase tracking-[0.25em] text-bento-sand mb-2">
+          <DateFormatter dateString={date} />
+        </p>
+        <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-bento-cream">
+          {title}
+        </h3>
+        <p className="mt-2 hidden md:block text-sm leading-relaxed text-bento-sand max-w-md">
+          {excerpt}
+        </p>
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-        <div className="p-5 border-3 border-neo-black bg-neo-pink shadow-neo-md transform hover:-rotate-1 transition-transform duration-200">
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight font-bold text-neo-black">
-            <Link 
-              href={`/posts/${slug}`} 
-              className="hover:underline hover:underline-offset-4 hover:decoration-4"
-            >
-              {title}
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg font-bold bg-neo-blue inline-block px-3 py-1 border-2 border-neo-black transform rotate-1">
-            <DateFormatter dateString={date} />
-          </div>
-        </div>
-        <div className="p-5 border-3 border-neo-black bg-neo-white shadow-neo-md transform hover:rotate-1 transition-transform duration-200 mt-5 md:mt-0">
-          <p className="text-lg leading-relaxed mb-4 text-neo-black">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
-      </div>
-    </section>
+    </Link>
   );
 }

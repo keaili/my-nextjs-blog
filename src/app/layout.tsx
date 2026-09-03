@@ -61,7 +61,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body
-        className={cn(spaceGrotesk.className, "bg-neo-bg")}
+        className={cn(spaceGrotesk.className, "bg-bento-bg text-bento-cream")}
       >
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>

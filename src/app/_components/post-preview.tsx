@@ -1,7 +1,6 @@
 import { type Author } from "@/interfaces/author";
+import Image from "next/image";
 import Link from "next/link";
-import Avatar from "./avatar";
-import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 
 type Props = {
@@ -11,34 +10,40 @@ type Props = {
   excerpt: string;
   author: Author;
   slug: string;
+  wide?: boolean;
 };
 
 export function PostPreview({
   title,
   coverImage,
   date,
-  excerpt,
-  author,
   slug,
+  wide = false,
 }: Props) {
   return (
-    <div className="border-3 border-neo-black bg-neo-white shadow-neo-md p-5 transform hover:rotate-1 transition-transform duration-200">
-      <div className="mb-5 border-3 border-neo-black bg-neo-green overflow-hidden">
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div>
-      <h3 className="text-3xl mb-3 leading-snug font-bold">
-        <Link 
-          href={`/posts/${slug}`} 
-          className="hover:underline hover:underline-offset-4 hover:decoration-2"
-        >
+    <Link
+      href={`/posts/${slug}`}
+      aria-label={title}
+      className={`group relative block h-64 md:h-auto overflow-hidden rounded-3xl border border-bento-line ${
+        wide ? "md:col-span-2 md:row-span-1" : "md:col-span-1 md:row-span-1"
+      }`}
+    >
+      <Image
+        src={coverImage}
+        alt={`Cover Image for ${title}`}
+        fill
+        sizes="(max-width: 768px) 100vw, 25vw"
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+      <div className="absolute bottom-0 left-0 p-5">
+        <p className="text-[11px] uppercase tracking-[0.25em] text-bento-sand mb-1">
+          <DateFormatter dateString={date} />
+        </p>
+        <h3 className="text-xl font-bold leading-snug text-bento-cream">
           {title}
-        </Link>
-      </h3>
-      <div className="text-lg mb-4 font-bold bg-neo-blue inline-block px-3 py-1 border-2 border-neo-black transform -rotate-1">
-        <DateFormatter dateString={date} />
+        </h3>
       </div>
-      <p className="text-lg leading-relaxed mb-4 text-neo-black">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
-    </div>
+    </Link>
   );
 }

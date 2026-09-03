@@ -29,6 +29,16 @@ const config: Config = {
         "neo-black": "#000000",
         "neo-white": "#FFFFFF",
         "neo-bg": "#F8F8F8",
+        // Dark editorial bento colors
+        "bento-bg": "#211D1A",
+        "bento-card": "#2E2925",
+        "bento-taupe": "#7A6B58",
+        "bento-olive": "#6B6353",
+        "bento-rust": "#8A3A20",
+        "bento-clay": "#C97B4A",
+        "bento-cream": "#EFE8DC",
+        "bento-sand": "#C9BBA6",
+        "bento-line": "#3A332D",
       },
       spacing: {
         28: "7rem",
